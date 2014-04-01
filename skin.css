@@ -1,0 +1,153 @@
+/**
+ *
+ * Sistema Demandas CSS
+ * 
+ * Desenvolvido por André de Oliveira Santana 
+ * [ versao: 1.0 ] 
+ *
+**/
+.bodyMenu
+{
+ background-image:url('images/blue_bg.png');
+ background-color:#cccccc;
+ background-repeat:repeat-y;
+ background-size: contain;
+ font-family: Segoe UI Light,Helvetica Neue Light,Segoe UI,Helvetica Neue, Helvetica, Trebuchet MS,Droid Sans, Tahoma, Geneva, sans-serif;
+
+}
+/* global tag impact */
+A, BODY, INPUT, OPTION, SELECT, TABLE, TD, TR
+{
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+A:link    { color:black; text-decoration:none }
+A:visited { color:black; text-decoration:none }
+A:active  { color:black; text-decoration:none  }
+A:hover   { color:red;  text-decoration:none  }
+
+/* menu */
+.btNormal{
+   width:70;
+   height:70;
+   text-align:center;
+   vertical-align:middle;
+   padding:0;
+   border-width:0;
+}
+
+.btDown{
+   width:69;
+   height:69;
+   text-align:center;
+   vertical-align:middle;
+   padding:1;
+   border: 1px inset;
+}
+
+/* main.php */
+.tabletopinfo
+{
+border-left:1px solid black;
+border-right:1px solid black;
+border-bottom:1px solid black;
+border-top:1px solid black;
+}
+
+.topInfo
+{
+text-align:left;
+vertical-align:middle;
+font-size: 16px;
+font-weight:bold;
+height:25;
+}
+
+.bottomInfo
+{
+
+text-align:left;
+vertical-align:middle;
+font-size: 10px;
+font-weight:bold;
+height:25;
+}
+
+.tableDem
+{
+background: url('../img/bar_amarelo.png') repeat-x;
+text-align:left;
+font-weight:bold;
+border-bottom:1px solid black;
+background-color: #739AC5;
+
+}
+
+.rowdem
+{
+text-align:left;
+vertical-align:middle;
+#background-color: #FFFFDF;
+background-color: #ECF2F9;
+}
+
+.rowAnalitico
+{
+text-align:left;
+vertical-align:middle;
+font-weight: bold;
+
+}
+
+
+.rowdem2
+{
+text-align:left;
+vertical-align:middle;
+#background-color: #FFFFB9;
+background-color: #DAE8F6;
+
+}
+
+tr.rowselected:hover
+{
+color:red;
+}
+
+.destaque
+{
+ color:red;
+}
+
+.treeIndent { margin-left:10pt }
+
+.quadradoTitle{
+
+    position: absolute;
+    font-size:31px;
+    color:#FFFFFF;
+    top: 24%;
+    left: 6%;
+	font-family: Segoe UI Light,Helvetica Neue Light,Segoe UI,Helvetica Neue, Helvetica, Trebuchet MS,Droid Sans, Tahoma, Geneva, sans-serif;
+}
+
+.depto {
+   font-size:12px;
+}
+
+.head{
+    position: absolute;
+    height: 85px;
+    width:  270px;
+   
+    top: -1%;
+    right: -2%;
+
+}
+
+
+.textInfo {
+     margin:0px 0px 15px 24%;	 
+}
+

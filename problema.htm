@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<title>Documentação de Problemas - v2.0</title>
+<link rel="stylesheet" type="text/css" href="../geral_problema.css">
+<script src="../jquery.js" type="text/javascript"></script>
+<script src="../jquery.maskedinput.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function() {
+$('input[@name=cod_problema]').mask('9999/9999');
+});
+
+
+function checkForm(){
+
+if (form.cod_problema.value == ""){
+	alert ("Informe o código do problema!");
+		form.cod_problema.focus();
+		return (false);
+	}
+if (form.Acao.value == "Escolha" && form.cod_problema.value !== ""){
+	alert ("Escolha uma opção!");
+		form.Acao.focus();
+		return (false);
+	}
+return (true);
+}
+
+
+function redirecionaRel(opcao) {
+	
+	
+	if (opcao == 'rel_analitico_pro') {
+		document.location = 'relatorio/form_relatorio_analitico.php';
+	}
+	
+	if (opcao == 'rel_acomp_pro') {
+		document.location = 'relatorio/form_relatorio_acompanhamento.php';
+	} 
+}
+
+
+</script>
+
+
+</head>
+<body>
+<form name="form" onsubmit="return checkForm()" method="POST" action="scp_redireciona_pro.php">
+<div class="tudo">
+   <div class="topo">
+        <div class="figura_normal"></div>
+        <div class="h1">Documentação de Problemas</div>
+   </div>
+   <div class="comum">
+        <ul>
+		    <li>Para registrar um problema <a href="../scp_verifica_javascript.php?id=problema2">clique aqui</a>.</li>
+      		<li>Para mais opções, veja abaixo:
+	        <li><select size="1" name="Acao">
+		    		<option value="Escolha" selected>Escolha...</option>
+		    		<option value="Altera_problema">Alterar problema</option>
+			    	<option value="Altera_situacao">Alterar situação</option>
+			   	    <!--<option value="Registra_acao">Registrar ação</option>-->
+   			   	    <option value="Edicao_acao">Adicionar/Editar ação</option>
+                    <option value="Relaciona_incidentes">Relacionar incidentes</option>
+                    <option value="Incidentes_relacionados">Ver incidentes relacionados</option>
+                    <option value="Pesquisa_problema">Pesquisar problema</option>
+				</select>
+                Código do Problema:<input type="text" name="cod_problema"  maxlength ="9" size="9">&nbsp;&nbsp;
+			<input type="submit" value="Pesquisar" name="Pesquisar"></li>
+            
+            <li>Relatórios:
+            	<select size="1" id="rel_acao">
+		    		<option value="rel_analitico_pro">Analítico de Problemas</option>
+			    	<option value="rel_acomp_pro">Acompanhamento do Processo de Problemas</option>
+				</select>
+				<input type="button" onclick="redirecionaRel(document.getElementById('rel_acao').options[document.getElementById('rel_acao').options.selectedIndex].value);" value="Pesquisar" name="Pesquisar">
+			</li>
+
+			<li><a href="form_pesquisar_problema.php">Pesquisa avançada de problemas</a></li>
+            
+            <!-- <li><a href="form_relatorio_analitico.php">Relatório Analítico de Problemas</a></li>-->
+            <!--<li><a href="form_incidentes_divulgados.php">Incidentes divulgados</a></li>
+	    	<li><a href="form_alt_cadastro_analista.php">Cadastro de analista</a></li> -->
+	    	
+	    	
+         </ul>
+		 <p align="center"><a href="http://intranetac/diretorias/vitec/cesep/geop">Portal GEOP na Intranet</a></p><br>
+     </div>
+</div>
+<div  style="font-size:9pt;font-weight:bold;font-family: arial, verdana, serif;"> versão  2.0 </div>
+</form>
+
+
+</body>
+</html>

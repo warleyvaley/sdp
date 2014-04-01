@@ -1,0 +1,17 @@
+<?php
+///////////////////////////////////////////////////////////
+//
+// Interface para criação de arquivos de diferentes
+// tipos
+//
+// Desenvolvido por André Santana
+// CESEP - GEOP  - 2013
+//
+///////////////////////////////////////////////////////////
+interface iFileCreator {
+	
+	public function createFile($dados);
+	
+}
+
+?>

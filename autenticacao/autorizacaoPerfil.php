@@ -1,0 +1,33 @@
+<?php
+//////////////////////////////////////////////////////
+//
+// Verifica o perfil do Usuário logado no sistema
+// e permite ou não a opção de acessar a opção 
+// informada
+//
+//////////////////////////////////////////////////////
+//error_reporting(E_ALL);
+//ini_set('display_errors', '1');
+
+	
+//verifica se a página é permitida para o usuário 
+//logado
+
+function verificaPermissao($nomePagina,$usuario,$conexao) {
+		
+	list($dominio,$usr) = explode ("[\]", $usuario);
+	$sql= "SELECT  count(usu.id_usuario) as total
+       	   FROM  derep_usuario usu
+       	   INNER JOIN pro_v2_permissao_acesso perm ON usu.id_usuario = perm.id_usuario 
+           WHERE usu.login = '$usr' AND perm.nome_pagina = '$nomePagina'";
+	//$resultado = mysqlexecuta($conexao,$sql);
+	$rs_row = mysql_fetch_array($resultado);
+	
+	if ($rs_row['total'] == 0) {
+		return false;
+	} else {
+		return true;
+	}	
+}
+
+?>
