@@ -1,6 +1,6 @@
 <!-- **********************
   Equipe OpenView
-  Desenvolvido por: André de Oliveira Santana
+  Desenvolvido por: André Luis de Almeida
   Março de 2011
 ********************** -->
 <html>
