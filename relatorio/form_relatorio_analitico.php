@@ -13,6 +13,7 @@ error_reporting(E_ALL);
    		  
 include "../../mysqlconecta_dbbit.php";
 include "../../mysqlexecuta_pro.php";
+inclui uma linha aqui em 2016 nov 21/11
 
 $de = "";
 $ate = "";
@@ -112,7 +113,7 @@ function checkform(){
 <div class="tudo">
      <div class="topo">
           <div class="figura_normal"></div>
-          <div class="h1">Relatório Analítico de Problemas</div>
+          <div class="h1">RelatÃ³rio AnalÃ­tico de Problemas</div>
      </div>
      <div class="comum">
           <table border="0">       
@@ -130,7 +131,7 @@ function checkform(){
           	  
            	  <tr>	
           	   <td>
-               		Código do Problema:
+               		CÃ³digo do Problema:
                </td>
                <td>		
                		<input type="text" name="cod_problema" value="" maxlength ="9" size="9" />
@@ -138,7 +139,7 @@ function checkform(){
           	  </tr>	
           	  
           	  <tr>
-               <td>Por Situação:</td>
+               <td>Por SituaÃ§Ã£o:</td>
                <td>
                    <select name="cmb_situacao">
                    		<option value="0" >TODOS</option>
@@ -156,7 +157,7 @@ function checkform(){
               </tr>
               
               <tr>                        
-               <td>Período:</td>
+               <td>PerÃ­odo:</td>
                <td>
                        <input type="text" name="periodo_inicial"  maxlength ="10" size="10" value="<?php if ($de <> "")  echo "$de"; ?>" readonly>
                        <input type="button" name="cal1" value="..." onclick="displayCalendar(document.forms[0].periodo_inicial,'dd/mm/yyyy',this)">&nbsp;&nbsp;
@@ -178,7 +179,7 @@ function checkform(){
 </html>
 <?php
 
-//FECHAR CONEXÃO COM O BANCO
+//FECHAR CONEXÃƒO COM O BANCO
 mysql_close($conexao);
 ?>
 
